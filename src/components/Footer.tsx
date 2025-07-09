@@ -56,9 +56,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contato</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Contato</h3>
             <div className="space-y-3">
-              <p className="text-slate-300">
+              <p className="text-white font-medium">
                 <span className="text-cyan-400">📧</span> contato@axisai.com.br
               </p>
               <p className="text-slate-300">
