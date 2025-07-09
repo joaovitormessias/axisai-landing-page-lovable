@@ -1,4 +1,3 @@
-
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
@@ -11,7 +10,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/3ca54b00-c412-4d71-8fc9-cccf68d7a6f7.png" 
+                src="/lovable-uploads/ce39e42c-c09e-48ac-b406-b2784d51188c.png" 
                 alt="AXISAI Logo" 
                 className="h-12 w-auto"
               />

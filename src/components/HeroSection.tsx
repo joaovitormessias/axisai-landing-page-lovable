@@ -1,4 +1,3 @@
-
 import { ArrowRight, Bot, Brain, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -60,11 +59,20 @@ const HeroSection = () => {
         
         <div className="lg:w-1/2 relative">
           <div className="relative w-full max-w-lg mx-auto">
-            {/* Central AI brain visualization */}
-            <div className="relative w-80 h-80 mx-auto">
+            {/* Central logo with AI visualization */}
+            <div className="relative w-80 h-80 mx-auto flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full animate-spin-slow opacity-20"></div>
               <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-spin-reverse opacity-30"></div>
-              <div className="absolute inset-8 bg-gradient-to-r from-blue-600 to-cyan-300 rounded-full animate-pulse"></div>
+              <div className="absolute inset-8 bg-gradient-to-r from-blue-600 to-cyan-300 rounded-full animate-pulse opacity-40"></div>
+              
+              {/* Logo central */}
+              <div className="relative z-10">
+                <img 
+                  src="/lovable-uploads/0df23ff8-ed9d-4ae7-b5e8-a767fa875499.png" 
+                  alt="AXISAI Logo" 
+                  className="h-32 w-auto"
+                />
+              </div>
               
               {/* Floating icons */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">

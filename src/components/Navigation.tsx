@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -20,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/00b2aa08-0383-4f14-8c41-6da91fba35dd.png" 
+              src="/lovable-uploads/ce39e42c-c09e-48ac-b406-b2784d51188c.png" 
               alt="AXISAI Logo" 
               className="h-10 w-auto"
             />
