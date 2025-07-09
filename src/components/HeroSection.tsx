@@ -63,7 +63,7 @@ const HeroSection = () => {
             <div className="relative w-80 h-80 mx-auto flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full animate-spin-slow opacity-20"></div>
               <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-spin-reverse opacity-30"></div>
-              <div className="absolute inset-8 bg-gradient-to-r from-blue-600 to-cyan-300 rounded-full animate-pulse opacity-40"></div>
+              <div className="absolute inset-8 bg-gradient-to-br from-slate-900 via-blue-800 to-cyan-700 rounded-full animate-pulse opacity-70 blur-sm"></div>
               
               {/* Logo central */}
               <div className="relative z-10">
