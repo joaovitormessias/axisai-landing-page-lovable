@@ -68,7 +68,7 @@ const HeroSection = () => {
               {/* Logo central */}
               <div className="relative z-10">
                 <img 
-                  src="/lovable-uploads/0df23ff8-ed9d-4ae7-b5e8-a767fa875499.png" 
+                  src="/lovable-uploads/logo_axisai_sem_nome.svg" 
                   alt="AXISAI Logo" 
                   className="h-32 w-auto"
                 />
