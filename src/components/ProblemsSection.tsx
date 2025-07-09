@@ -31,7 +31,7 @@ const ProblemsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
             Problemas que Freiam seu{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
               Crescimento
             </span>
           </h2>
@@ -46,7 +46,7 @@ const ProblemsSection = () => {
               key={index}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-slate-200"
             >
-              <div className="bg-red-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-r from-red-100 to-red-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
                 <problem.icon className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">{problem.title}</h3>

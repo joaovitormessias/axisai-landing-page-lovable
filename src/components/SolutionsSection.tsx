@@ -9,21 +9,21 @@ const SolutionsSection = () => {
       title: "IA de Dados Gerenciais",
       description: "Transforme dados complexos em insights claros através de linguagem natural. Faça perguntas e receba análises instantâneas.",
       features: ["Análise por voz", "Dashboards inteligentes", "Relatórios automatizados", "Insights preditivos"],
-      gradient: "from-blue-600 to-cyan-600"
+      gradient: "from-blue-600 to-cyan-400"
     },
     {
       icon: MessageSquare,
       title: "IA de Atendimento Inteligente",
       description: "Automatize e personalize o atendimento com IA que aprende e evolui constantemente com cada interação.",
       features: ["WhatsApp integrado", "Respostas humanizadas", "Agendamento automático", "Análise pós-conversa"],
-      gradient: "from-cyan-600 to-blue-600"
+      gradient: "from-cyan-600 to-blue-400"
     },
     {
       icon: Cog,
       title: "Assistente Híbrido",
       description: "Soluções sob medida que combinam IA conversacional com expertise específica do seu setor de atuação.",
       features: ["Customização total", "Integração com sistemas", "Treinamento específico", "Suporte especializado"],
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-blue-500 to-cyan-300"
     }
   ];
 
@@ -33,7 +33,7 @@ const SolutionsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
             Ecossistema{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
               AXISAI
             </span>
           </h2>
@@ -62,7 +62,7 @@ const SolutionsSection = () => {
                 <ul className="space-y-3 mb-8">
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-700">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
@@ -83,7 +83,7 @@ const SolutionsSection = () => {
               "Na AXISAI, acreditamos que a verdadeira inteligência artificial deve ser acessível, conversacional e 
               orientada a resultados de negócio mensuráveis."
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8">
               Conheça Todas as Soluções
             </Button>
           </div>

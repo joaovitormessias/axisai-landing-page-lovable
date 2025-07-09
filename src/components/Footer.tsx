@@ -10,25 +10,26 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-2 rounded-lg mr-3">
-                <span className="text-white font-bold text-xl">AXIS</span>
-              </div>
-              <span className="text-white font-bold text-xl">AI</span>
+              <img 
+                src="/lovable-uploads/3ca54b00-c412-4d71-8fc9-cccf68d7a6f7.png" 
+                alt="AXISAI Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">
               Transformando dados em inteligência de negócios com IA avançada.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -37,20 +38,20 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Plataforma</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Analytics</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">IA Generativa</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Integrações</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Segurança</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Analytics</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">IA Generativa</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Integrações</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Segurança</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-6">Empresa</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Sobre nós</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Carreiras</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-blue-400 transition-colors">Contato</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Sobre nós</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Carreiras</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Blog</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Contato</a></li>
             </ul>
           </div>
 
@@ -58,13 +59,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contato</h3>
             <div className="space-y-3">
               <p className="text-slate-300">
-                <span className="text-blue-400">📧</span> contato@axisai.com.br
+                <span className="text-cyan-400">📧</span> contato@axisai.com.br
               </p>
               <p className="text-slate-300">
-                <span className="text-blue-400">📞</span> +55 11 4002-8922
+                <span className="text-cyan-400">📞</span> +55 11 4002-8922
               </p>
               <p className="text-slate-300">
-                <span className="text-blue-400">📍</span> Av. Paulista, 1000 - São Paulo, SP
+                <span className="text-cyan-400">📍</span> Av. Paulista, 1000 - São Paulo, SP
               </p>
             </div>
           </div>
@@ -75,10 +76,10 @@ const Footer = () => {
             © {currentYear} AXISAI. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">
+            <a href="#" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors">
               Termos de Serviço
             </a>
-            <a href="#" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">
+            <a href="#" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors">
               Política de Privacidade
             </a>
           </div>

@@ -1,5 +1,5 @@
 
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -33,6 +33,10 @@ const TestimonialsSection = () => {
     { metric: "25%", description: "Crescimento em satisfação do cliente" }
   ];
 
+  const StarIcon = ({ filled }: { filled: boolean }) => (
+    <div className={`h-5 w-5 ${filled ? 'bg-gradient-to-r from-blue-400 to-cyan-300' : 'bg-gray-300'} rounded-full`}></div>
+  );
+
   return (
     <section className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
@@ -49,13 +53,13 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300"
+              className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-cyan-400 transition-all duration-300"
             >
               <div className="flex items-center mb-6">
-                <Quote className="h-8 w-8 text-blue-400 mr-4" />
+                <Quote className="h-8 w-8 text-cyan-400 mr-4" />
                 <div className="flex space-x-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    <StarIcon key={i} filled={true} />
                   ))}
                 </div>
               </div>
@@ -65,7 +69,7 @@ const TestimonialsSection = () => {
               </p>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-lg">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </span>

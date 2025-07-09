@@ -19,10 +19,11 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-2 rounded-lg mr-3">
-              <span className="text-white font-bold text-lg">AXIS</span>
-            </div>
-            <span className="text-white font-bold text-lg">AI</span>
+            <img 
+              src="/lovable-uploads/00b2aa08-0383-4f14-8c41-6da91fba35dd.png" 
+              alt="AXISAI Logo" 
+              className="h-10 w-auto"
+            />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -30,7 +31,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-slate-300 hover:text-blue-400 transition-colors"
+                className="text-slate-300 hover:text-cyan-400 transition-colors"
               >
                 {item.label}
               </a>
@@ -38,7 +39,7 @@ const Navigation = () => {
           </div>
 
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
+            <Button className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white">
               Demonstração Gratuita
             </Button>
           </div>
@@ -60,13 +61,13 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block text-slate-300 hover:text-blue-400 transition-colors"
+                  className="block text-slate-300 hover:text-cyan-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white mt-4">
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white mt-4">
                 Demonstração Gratuita
               </Button>
             </div>
