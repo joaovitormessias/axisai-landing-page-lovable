@@ -2,11 +2,8 @@
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
-  const scrollToContact = () => {
-    const contactSection = document.querySelector('#contato');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleDashboardClick = () => {
+    window.open('https://app.axisai.com.br/', '_blank');
   };
 
   return (
@@ -15,17 +12,16 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex">
             <img 
-              src="/lovable-uploads/logo_branca.svg" 
+              src="/lovable-uploads/logo_axisai_com_nome.svg" 
               alt="AXISAI Logo" 
               className="h-10 w-auto"
             />
           </div>
 
           <div className="block">
-            {/*TO DO: Quando a pessoa clicar no botão deve ser redirecionada para o link https://app.axisai.com.br/ */}
             <Button
               className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white"
-              onClick={scrollToContact}
+              onClick={handleDashboardClick}
             >
               Acessar Dashboard
             </Button>
