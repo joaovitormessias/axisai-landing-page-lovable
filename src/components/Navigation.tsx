@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex">
             <img
-              src="/lovable-uploads/logo_axisai_com_nome.svg"
+              src="/lovable-uploads/logo_axisai_sem_nome.svg"
               alt="AXISAI Logo"
               className="h-10 w-auto"
             />
