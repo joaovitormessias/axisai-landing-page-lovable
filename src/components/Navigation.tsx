@@ -30,14 +30,14 @@ const Navigation = () => {
           <div className="block">
             <div className="flex items-center gap-4">
               <Button
-                className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white"
+                className= "bg-slate-100 text-slate-800 hover:bg-slate-200"
                 onClick={handleDashboardClick}
               >
                 Acessar Dashboard
               </Button>
 
               <Button
-                className="bg-slate-100 text-slate-800 hover:bg-slate-200"
+                className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white"
                 onClick={scrollToContact}
               >
                 Demonstração Gratuita
