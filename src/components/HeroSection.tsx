@@ -48,14 +48,7 @@ const HeroSection = () => {
               Comece Agora
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-cyan-400 text-cyan-300 hover:bg-blue-900/50 px-8 py-4 rounded-lg font-semibold text-lg"
-              onClick={scrollToContact}
-            >
-              Ver Demonstração
-            </Button>
+            
           </div>
 
         </div>
@@ -79,19 +72,19 @@ const HeroSection = () => {
 
               {/* Floating icons in triangle formation with counter rotation */}
               <div className="absolute inset-0 animate-spin-slower">
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/3 -translate-y-4">
                   <div className="bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-full shadow-lg animate-bounce animate-counter-rotate">
                     <Brain className="h-6 w-6 text-white" />
                   </div>
                 </div>
 
-                <div className="absolute bottom-8 left-8 transform">
+                <div className="absolute bottom-1/4 left-1 transform">
                   <div className="bg-gradient-to-r from-cyan-600 to-blue-400 p-4 rounded-full shadow-lg animate-bounce delay-300 animate-counter-rotate">
                     <Bot className="h-6 w-6 text-white" />
                   </div>
                 </div>
 
-                <div className="absolute bottom-8 right-8 transform">
+                <div className="absolute bottom-1/4 right-1 transform">
                   <div className="bg-gradient-to-r from-blue-500 to-cyan-300 p-4 rounded-full shadow-lg animate-bounce delay-700 animate-counter-rotate">
                     <Zap className="h-6 w-6 text-white" />
                   </div>

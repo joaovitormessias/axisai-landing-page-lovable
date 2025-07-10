@@ -22,11 +22,12 @@ const Navigation = () => {
           </div>
 
           <div className="block">
-            <Button 
+            {/*TO DO: Quando a pessoa clicar no botão deve ser redirecionada para o link https://app.axisai.com.br/ */}
+            <Button
               className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white"
               onClick={scrollToContact}
             >
-              Demonstração Gratuita
+              Acessar Dashboard
             </Button>
           </div>
         </div>

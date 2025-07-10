@@ -20,7 +20,9 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="bg-slate-800 rounded-2xl p-12 border border-slate-700">
+          {/* TO DO: responsabilizar essa seção para aparecer de forma correta no site */}
           <div className="flex justify-center items-center space-x-16">
+
             <a 
               href="https://www.bellesoftware.com.br/" 
               target="_blank" 
