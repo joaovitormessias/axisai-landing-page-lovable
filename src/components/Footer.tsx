@@ -47,7 +47,6 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-6">Plataforma</h3>
-            {/*TO DO: Quando a pessoa clicar no botão deve ser redirecionada para o link https://app.axisai.com.br/  */}
             <ul className="space-y-3">
               <li><a href=" https://app.axisai.com.br/" className="text-slate-300 hover:text-cyan-400 transition-colors">Analytics</a></li>
               <li><a href=" https://app.axisai.com.br/ " className="text-slate-300 hover:text-cyan-400 transition-colors">IA Generativa</a></li>
