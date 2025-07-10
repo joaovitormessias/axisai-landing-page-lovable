@@ -3,6 +3,13 @@ import { ArrowRight, Bot, Brain, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
       {/* Animated spheres background */}
@@ -36,7 +43,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg group"
-              onClick={() => window.open('https://app.axisai.com.br', '_blank')}
+              onClick={scrollToContact}
             >
               Comece Agora
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -45,48 +52,63 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="border-cyan-400 text-cyan-300 hover:bg-blue-900/50 px-8 py-4 rounded-lg font-semibold text-lg"
-              onClick={() => window.open('https://app.axisai.com.br', '_blank')}
+              onClick={scrollToContact}
             >
               Ver Demonstração
             </Button>
           </div>
 
-          
+          <div className="flex justify-center lg:justify-start items-center space-x-8 mt-12">
+            <div className="flex items-center space-x-2">
+              <img 
+                src="/lovable-uploads/f79e699c-1d12-4089-98b9-7cea469b6edb.png" 
+                alt="Belle Software" 
+                className="h-8 w-auto opacity-70"
+              />
+            </div>
+            <div className="flex items-center space-x-2">
+              <img 
+                src="/lovable-uploads/7b9a2930-37a8-43d0-a7d7-88065a554234.png" 
+                alt="PlaySaaS" 
+                className="h-8 w-auto opacity-70"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="lg:w-1/2 relative">
           <div className="relative w-full max-w-lg mx-auto">
             {/* Central logo with AI visualization */}
             <div className="relative w-80 h-80 mx-auto flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full animate-spin-slow opacity-20"></div>
-              <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-spin-reverse opacity-30"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full animate-spin-slower opacity-20"></div>
+              <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-spin-reverse-slower opacity-30"></div>
               <div className="absolute inset-8 bg-gradient-to-br from-slate-900 via-blue-800 to-cyan-700 rounded-full animate-pulse opacity-70 blur-sm"></div>
 
               {/* Logo central */}
               <div className="relative z-10">
                 <img
-                  src="/lovable-uploads/logo_axisai_sem_nome.svg"
+                  src="/lovable-uploads/ce39e42c-c09e-48ac-b406-b2784d51188c.png"
                   alt="AXISAI Logo"
                   className="h-32 w-auto"
                 />
               </div>
 
-              {/* Floating icons in triangle formation */}
-              <div className="absolute inset-0 animate-spin-slow">
+              {/* Floating icons in triangle formation with counter rotation */}
+              <div className="absolute inset-0 animate-spin-slower">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-full shadow-lg animate-bounce">
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-full shadow-lg animate-bounce animate-counter-rotate">
                     <Brain className="h-6 w-6 text-white" />
                   </div>
                 </div>
 
                 <div className="absolute bottom-8 left-8 transform">
-                  <div className="bg-gradient-to-r from-cyan-600 to-blue-400 p-4 rounded-full shadow-lg animate-bounce delay-300">
+                  <div className="bg-gradient-to-r from-cyan-600 to-blue-400 p-4 rounded-full shadow-lg animate-bounce delay-300 animate-counter-rotate">
                     <Bot className="h-6 w-6 text-white" />
                   </div>
                 </div>
 
                 <div className="absolute bottom-8 right-8 transform">
-                  <div className="bg-gradient-to-r from-blue-500 to-cyan-300 p-4 rounded-full shadow-lg animate-bounce delay-700">
+                  <div className="bg-gradient-to-r from-blue-500 to-cyan-300 p-4 rounded-full shadow-lg animate-bounce delay-700 animate-counter-rotate">
                     <Zap className="h-6 w-6 text-white" />
                   </div>
                 </div>

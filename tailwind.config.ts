@@ -76,12 +76,27 @@ export default {
           from: { transform: "rotate(360deg)" },
           to: { transform: "rotate(0deg)" },
         },
+        "spin-slower": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "spin-reverse-slower": {
+          from: { transform: "rotate(360deg)" },
+          to: { transform: "rotate(0deg)" },
+        },
+        "counter-rotate": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(-360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-slow": "spin-slow 8s linear infinite",
         "spin-reverse": "spin-reverse 6s linear infinite",
+        "spin-slower": "spin-slower 15s linear infinite",
+        "spin-reverse-slower": "spin-reverse-slower 12s linear infinite",
+        "counter-rotate": "counter-rotate 15s linear infinite",
       },
     },
   },

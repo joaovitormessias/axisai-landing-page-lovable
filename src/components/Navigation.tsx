@@ -1,77 +1,35 @@
-import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const menuItems = [
-    { label: "Sobre", href: "#sobre" },
-    { label: "Soluções", href: "#solucoes" },
-    { label: "Desenvolvimento", href: "#desenvolvimento" },
-    { label: "Diferenciais", href: "#diferenciais" },
-    { label: "Depoimentos", href: "#depoimentos" }
-  ];
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <div className="flex ">
+          <div className="flex">
             <img 
-              src="/lovable-uploads/logo_branca.svg" 
+              src="/lovable-uploads/0df23ff8-ed9d-4ae7-b5e8-a767fa875499.png" 
               alt="AXISAI Logo" 
               className="h-10 w-auto"
             />
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-slate-300 hover:text-cyan-400 transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white">
+          <div className="block">
+            <Button 
+              className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white"
+              onClick={scrollToContact}
+            >
               Demonstração Gratuita
             </Button>
           </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white p-2"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
         </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-slate-700">
-            <div className="py-4 space-y-4">
-              {menuItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block text-slate-300 hover:text-cyan-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white mt-4">
-                Demonstração Gratuita
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );

@@ -4,6 +4,13 @@ import { Linkedin, Instagram, ExternalLink } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-6 py-16">
@@ -11,7 +18,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/logo_branca.svg" 
+                src="/lovable-uploads/0df23ff8-ed9d-4ae7-b5e8-a767fa875499.png" 
                 alt="AXISAI Logo" 
                 className="h-12 w-auto"
               />
@@ -55,7 +62,7 @@ const Footer = () => {
               <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Sobre nós</a></li>
               <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Carreiras</a></li>
               <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">Contato</a></li>
+              <li><button onClick={scrollToContact} className="text-slate-300 hover:text-cyan-400 transition-colors">Contato</button></li>
             </ul>
           </div>
 
@@ -66,10 +73,10 @@ const Footer = () => {
                 <span className="text-cyan-400">📧</span> contato@axisai.com.br
               </p>
               <p className="text-slate-300">
-                <span className="text-cyan-400">📞</span> +55 11 4002-8922
+                <span className="text-cyan-400">📞</span> 49 9195-1122
               </p>
               <p className="text-slate-300">
-                <span className="text-cyan-400">📍</span> Av. Paulista, 1000 - São Paulo, SP
+                <span className="text-cyan-400">📍</span> Rua Atilio Faoro, 85 — Centro, Caçador - SC
               </p>
               <a 
                 href="https://app.axisai.com.br" 

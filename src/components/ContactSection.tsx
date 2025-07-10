@@ -20,12 +20,48 @@ const ContactSection = () => {
 
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Solicitação enviada!",
-      description: "Nossa equipe entrará em contato em breve para agendar sua demonstração.",
-    });
+    
+    try {
+      // Criar o corpo do email
+      const emailBody = `
+Nova solicitação de demonstração:
+
+Nome: ${formData.name}
+Cargo: ${formData.role}
+Empresa: ${formData.company}
+E-mail: ${formData.email}
+Colaboradores: ${formData.employees}
+Segmento: ${formData.segment}
+      `;
+
+      // Enviar email via mailto (fallback)
+      const mailtoLink = `mailto:contato@axisai.com.br?subject=Nova Solicitação de Demonstração - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
+      window.open(mailtoLink);
+
+      toast({
+        title: "Solicitação enviada!",
+        description: "Nossa equipe entrará em contato em breve para agendar sua demonstração.",
+      });
+
+      // Limpar formulário
+      setFormData({
+        name: "",
+        role: "",
+        company: "",
+        email: "",
+        employees: "",
+        segment: "",
+        agreeToTerms: false
+      });
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente ou entre em contato diretamente pelo e-mail.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -33,7 +69,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50" id="contato">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -176,7 +212,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <div className="text-sm text-slate-600">Telefone</div>
-                      <div className="font-semibold text-slate-900">+55 11 4002-8922</div>
+                      <div className="font-semibold text-slate-900">49 9195-1122</div>
                     </div>
                   </div>
 
@@ -186,7 +222,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <div className="text-sm text-slate-600">Endereço</div>
-                      <div className="font-semibold text-slate-900">Av. Paulista, 1000 - São Paulo, SP</div>
+                      <div className="font-semibold text-slate-900">Rua Atilio Faoro, 85 — Centro, Caçador - SC</div>
                     </div>
                   </div>
                 </div>
@@ -195,10 +231,7 @@ const ContactSection = () => {
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 rounded-2xl text-white">
                 <h3 className="text-xl font-bold mb-4">Não encontrou o que procurava?</h3>
                 <p className="mb-6">Entre em contato com nossa equipe especializada</p>
-                <div className="flex space-x-4">
-                  <Button variant="secondary" className="bg-white text-blue-600 hover:bg-slate-100">
-                    <a href="#" className="text-blue-600 hover:underline">Solicitar demonstração</a>
-                  </Button>
+                <div className="flex justify-center">
                   <Button
                     className="bg-gradient-to-r from-cyan-500 to-teal-400 text-white hover:brightness-110 transition duration-300 font-semibold">
                     <a href="mailto:contato@axisai.com.br">contato@axisai.com.br</a>

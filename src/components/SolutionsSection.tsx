@@ -15,7 +15,7 @@ const SolutionsSection = () => {
       icon: MessageSquare,
       title: "IA de Atendimento Inteligente",
       description: "Automatize e personalize o atendimento com IA que aprende e evolui constantemente com cada interação.",
-      features: ["WhatsApp integrado", "Respostas humanizadas", "Agendamento automático", "Análise pós-conversa"],
+      features: ["Integração com WhatsApp", "Respostas humanizadas", "Agendamento automático", "Análise pós-conversa"],
       gradient: "from-cyan-600 to-blue-400"
     },
     {
@@ -27,8 +27,15 @@ const SolutionsSection = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="solucoes">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
@@ -70,7 +77,7 @@ const SolutionsSection = () => {
                 
                 <Button 
                   className={`w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white group`}
-                  onClick={() => window.open('https://app.axisai.com.br', '_blank')}
+                  onClick={scrollToContact}
                 >
                   Saiba Mais
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -89,7 +96,7 @@ const SolutionsSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8"
-              onClick={() => window.open('https://app.axisai.com.br', '_blank')}
+              onClick={scrollToContact}
             >
               Conheça Todas as Soluções
             </Button>
