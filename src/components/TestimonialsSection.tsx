@@ -26,6 +26,7 @@ const TestimonialsSection = () => {
     }
   ];
 
+  {/* TO DO:Remover porcentagens e colocar o logo das empresas aqui */ }
   const results = [
     { metric: "40%", description: "Redução em tempo de atendimento" },
     { metric: "35%", description: "Aumento na conversão de vendas" },

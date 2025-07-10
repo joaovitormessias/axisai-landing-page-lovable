@@ -79,6 +79,7 @@ const SolutionsSection = () => {
 
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200">
+            {/* TO DO: No lugar de assitente hibrido, colocamos "soluções sob medida" pq podemos desenvolver qualquer tipo de IA*/}
             <p className="text-lg text-slate-700 italic mb-6 max-w-4xl mx-auto">
               "Na AXISAI, acreditamos que a verdadeira inteligência artificial deve ser acessível, conversacional e 
               orientada a resultados de negócio mensuráveis."

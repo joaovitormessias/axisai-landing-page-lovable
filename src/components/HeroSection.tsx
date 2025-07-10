@@ -74,6 +74,8 @@ const HeroSection = () => {
                 />
               </div>
               
+              {/* TO DO: Deixar os icones flutuando em volta, também alterar as posições em distancias iguais para que formem um triangulo */}
+
               {/* Floating icons */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-400 p-4 rounded-full shadow-lg animate-bounce">

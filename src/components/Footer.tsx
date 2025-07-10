@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,13 +18,8 @@ const Footer = () => {
             <p className="text-slate-300 mb-6 leading-relaxed">
               Transformando dados em inteligência de negócios com IA avançada.
             </p>
+            {/* TO DO: Fazer os botões do linkedin e do insta funcionarem */}
             <div className="flex space-x-4">
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
-                <Twitter className="h-5 w-5" />
-              </a>
               <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
