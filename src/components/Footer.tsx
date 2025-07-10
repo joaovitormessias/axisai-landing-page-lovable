@@ -1,4 +1,5 @@
-import { Linkedin, Instagram } from "lucide-react";
+
+import { Linkedin, Instagram, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/logo_branca.svg" 
+                src="/lovable-uploads/0df23ff8-ed9d-4ae7-b5e8-a767fa875499.png" 
                 alt="AXISAI Logo" 
                 className="h-12 w-auto"
               />
@@ -18,12 +19,21 @@ const Footer = () => {
             <p className="text-slate-300 mb-6 leading-relaxed">
               Transformando dados em inteligência de negócios com IA avançada.
             </p>
-            {/* TO DO: Fazer os botões do linkedin e do insta funcionarem */}
             <div className="flex space-x-4">
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
+              <a 
+                href="https://linkedin.com/company/axisai" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300">
+              <a 
+                href="https://instagram.com/axisai.oficial" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -61,6 +71,15 @@ const Footer = () => {
               <p className="text-slate-300">
                 <span className="text-cyan-400">📍</span> Av. Paulista, 1000 - São Paulo, SP
               </p>
+              <a 
+                href="https://app.axisai.com.br" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 mt-4"
+              >
+                Acessar Plataforma
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>

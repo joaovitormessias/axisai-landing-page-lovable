@@ -20,8 +20,8 @@ const SolutionsSection = () => {
     },
     {
       icon: Cog,
-      title: "Assistente Híbrido",
-      description: "Soluções sob medida que combinam IA conversacional com expertise específica do seu setor de atuação.",
+      title: "Soluções sob Medida",
+      description: "Soluções personalizadas que combinam IA conversacional com expertise específica do seu setor de atuação.",
       features: ["Customização total", "Integração com sistemas", "Treinamento específico", "Suporte especializado"],
       gradient: "from-blue-500 to-cyan-300"
     }
@@ -68,7 +68,10 @@ const SolutionsSection = () => {
                   ))}
                 </ul>
                 
-                <Button className={`w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white group`}>
+                <Button 
+                  className={`w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white group`}
+                  onClick={() => window.open('https://app.axisai.com.br', '_blank')}
+                >
                   Saiba Mais
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -79,12 +82,15 @@ const SolutionsSection = () => {
 
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200">
-            {/* TO DO: No lugar de assitente hibrido, colocamos "soluções sob medida" pq podemos desenvolver qualquer tipo de IA*/}
             <p className="text-lg text-slate-700 italic mb-6 max-w-4xl mx-auto">
-              "Na AXISAI, acreditamos que a verdadeira inteligência artificial deve ser acessível, conversacional e 
-              orientada a resultados de negócio mensuráveis."
+              "Na AXISAI, acreditamos que a verdadeira inteligência artificial deve ser acessível, conversacional, 
+              orientada a resultados de negócio mensuráveis e entregue com rapidez."
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8"
+              onClick={() => window.open('https://app.axisai.com.br', '_blank')}
+            >
               Conheça Todas as Soluções
             </Button>
           </div>
