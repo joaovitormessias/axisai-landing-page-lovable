@@ -58,22 +58,6 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <div className="flex justify-center lg:justify-start items-center space-x-8 mt-12">
-            <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/f79e699c-1d12-4089-98b9-7cea469b6edb.png" 
-                alt="Belle Software" 
-                className="h-8 w-auto opacity-70"
-              />
-            </div>
-            <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/7b9a2930-37a8-43d0-a7d7-88065a554234.png" 
-                alt="PlaySaaS" 
-                className="h-8 w-auto opacity-70"
-              />
-            </div>
-          </div>
         </div>
 
         <div className="lg:w-1/2 relative">
@@ -87,7 +71,7 @@ const HeroSection = () => {
               {/* Logo central */}
               <div className="relative z-10">
                 <img
-                  src="/lovable-uploads/ce39e42c-c09e-48ac-b406-b2784d51188c.png"
+                  src="/lovable-uploads/logo_axisai_sem_nome.svg"
                   alt="AXISAI Logo"
                   className="h-32 w-auto"
                 />

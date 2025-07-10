@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/0df23ff8-ed9d-4ae7-b5e8-a767fa875499.png" 
+                src="/lovable-uploads/logo_branca.svg" 
                 alt="AXISAI Logo" 
                 className="h-12 w-auto"
               />
