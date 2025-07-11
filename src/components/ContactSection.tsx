@@ -6,6 +6,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
+
+const serviceID = import.meta.env.VITE_SERVICE_ID;
+const templateID = import.meta.env.VITE_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_USER_ID;
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -22,43 +27,36 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
-      // Criar o corpo do email
-      const emailBody = `
-Nova solicitação de demonstração:
+      const templateParams = {
+        name: formData.name,
+        role: formData.role,
+        company: formData.company,
+        email: formData.email,
+        employees: formData.employees,
+        segment: formData.segment,
+        date: new Date().toLocaleDateString('pt-BR'),
+      };
 
-Nome: ${formData.name}
-Cargo: ${formData.role}
-Empresa: ${formData.company}
-E-mail: ${formData.email}
-Colaboradores: ${formData.employees}
-Segmento: ${formData.segment}
-      `;
-
-      // Enviar email via mailto (fallback)
-      const mailtoLink = `mailto:contato@axisai.com.br?subject=Nova Solicitação de Demonstração - ${formData.company}&body=${encodeURIComponent(emailBody)}`;
-      window.open(mailtoLink);
+      await emailjs.send(
+        serviceID,       
+        templateID ,     
+        templateParams,
+        publicKey           // Public Key da sua conta (ou EmailJS public key)
+      );
 
       toast({
-        title: "Solicitação enviada!",
-        description: "Nossa equipe entrará em contato em breve para agendar sua demonstração.",
+        title: "Solicitação enviada com sucesso!",
+        description: "Nossa equipe entrará em contato por e-mail.",
       });
 
-      // Limpar formulário
-      setFormData({
-        name: "",
-        role: "",
-        company: "",
-        email: "",
-        employees: "",
-        segment: "",
-        agreeToTerms: false
-      });
+      setFormData({ ...formData, name: "", role: "", company: "", email: "", employees: "", segment: "", agreeToTerms: false });
     } catch (error) {
+      console.error(error);
       toast({
-        title: "Erro ao enviar",
-        description: "Tente novamente ou entre em contato diretamente pelo e-mail.",
+        title: "Erro ao enviar e-mail",
+        description: "Tente novamente ou entre em contato manualmente.",
         variant: "destructive",
       });
     }
