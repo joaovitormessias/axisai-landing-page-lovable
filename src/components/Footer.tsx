@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/company/axisai"
+                href="http://linkedin.com/company/axisai-br/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300"
@@ -36,7 +36,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com/axisai.oficial"
+                href="https://www.instagram.com/app.axisai/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-slate-800 p-2 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-400 transition-all duration-300"
