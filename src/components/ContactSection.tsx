@@ -212,7 +212,7 @@ Segmento: ${formData.segment}
                     </div>
                     <div>
                       <div className="text-sm text-slate-600">Telefone</div>
-                      <div className="font-semibold text-slate-900">49 9195-1122</div>
+                      <div className="font-semibold text-slate-900">48 9630-6705</div>
                     </div>
                   </div>
 

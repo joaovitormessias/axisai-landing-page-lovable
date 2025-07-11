@@ -62,7 +62,7 @@ const Footer = () => {
                 <span className="text-cyan-400">📧</span> contato@axisai.com.br
               </p>
               <p className="text-slate-300">
-                <span className="text-cyan-400">📞</span> 49 9195-1122
+                <span className="text-cyan-400">📞</span> 48 9630-6705
               </p>
               <p className="text-slate-300">
                 <span className="text-cyan-400">📍</span> Rua Atilio Faoro, 85 — Centro, Caçador - SC
