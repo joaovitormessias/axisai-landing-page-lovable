@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -101,5 +102,62 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply text-foreground;
+  }
+  
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-foreground;
+  }
+  
+  .prose p {
+    @apply text-foreground;
+  }
+  
+  .prose a {
+    @apply text-primary hover:text-primary/80;
+  }
+  
+  .prose code {
+    @apply bg-muted text-foreground;
+  }
+  
+  .prose pre {
+    @apply bg-muted text-foreground;
+  }
+  
+  .prose blockquote {
+    @apply border-l-border text-muted-foreground;
+  }
+  
+  .prose ul,
+  .prose ol {
+    @apply text-foreground;
+  }
+  
+  .prose li {
+    @apply text-foreground;
+  }
+  
+  .prose table {
+    @apply border-border;
+  }
+  
+  .prose th,
+  .prose td {
+    @apply border-border text-foreground;
+  }
+  
+  .prose th {
+    @apply bg-muted;
   }
 }
