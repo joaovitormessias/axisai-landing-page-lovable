@@ -45,18 +45,20 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message, onGraphClick 
             key={`text_${index}`}
             remarkPlugins={[remarkGfm]}
             components={{
-              code: ({ node, inline, className, children, ...props }) => {
+              code: ({ className, children, ...props }) => {
                 const match = /language-(\w+)/.exec(className || '');
-                return !inline && match ? (
+                const isInline = !match;
+                
+                return isInline ? (
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm" {...props}>
+                    {children}
+                  </code>
+                ) : (
                   <pre className="bg-muted p-2 rounded-md overflow-x-auto">
                     <code className={className} {...props}>
                       {children}
                     </code>
                   </pre>
-                ) : (
-                  <code className="bg-muted px-1 py-0.5 rounded text-sm" {...props}>
-                    {children}
-                  </code>
                 );
               },
             }}

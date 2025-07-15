@@ -2,7 +2,7 @@
 import React from 'react';
 import ChatInterface from '@/components/ChatInterface';
 
-const Chat = () => {
+const Chat: React.FC = () => {
   return <ChatInterface />;
 };
 
