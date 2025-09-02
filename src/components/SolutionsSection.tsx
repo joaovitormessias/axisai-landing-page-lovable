@@ -1,36 +1,43 @@
 
-import { MessageSquare, Database, Cog, ArrowRight } from "lucide-react";
+import { FlaskConical, Package, Cog, ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SolutionsSection = () => {
   const solutions = [
     {
-      icon: Database,
-      title: "IA de Dados Gerenciais",
-      description: "Transforme dados complexos em insights claros através de linguagem natural. Faça perguntas e receba análises instantâneas.",
-      features: ["Análise por voz", "Dashboards inteligentes", "Relatórios automatizados", "Insights preditivos"],
-      gradient: "from-blue-600 to-cyan-400"
+      icon: Package,
+      title: "Produtos a Pronta Entrega",
+      description: "Soluções completas de IA para atendimento inteligente, gestão empresarial e captação de leads prontas para implementação imediata.",
+      features: ["IA de Atendimento", "Gestor Inteligente", "Captação de Leads", "Implementação Rápida"],
+      gradient: "from-blue-600 to-cyan-400",
+      action: "contact"
     },
     {
-      icon: MessageSquare,
-      title: "IA de Atendimento Inteligente",
-      description: "Automatize e personalize o atendimento com IA que aprende e evolui constantemente com cada interação.",
-      features: ["Integração com WhatsApp", "Respostas humanizadas", "Agendamento automático", "Análise pós-conversa"],
-      gradient: "from-cyan-600 to-blue-400"
+      icon: FlaskConical,
+      title: "Laboratório de IA",
+      description: "Centro de inovação e desenvolvimento onde criamos soluções experimentais e personalizadas para desafios únicos.",
+      features: ["Experimentação Avançada", "Desenvolvimento Personalizado", "Testes e Validação", "Inovação Contínua"],
+      gradient: "from-cyan-600 to-blue-400",
+      action: "labs"
     },
     {
       icon: Cog,
       title: "Soluções sob Medida",
-      description: "Soluções personalizadas que combinam IA conversacional com expertise específica do seu setor de atuação.",
-      features: ["Customização total", "Integração com sistemas", "Treinamento específico", "Suporte especializado"],
-      gradient: "from-blue-500 to-cyan-300"
+      description: "Desenvolvimento personalizado para indústria e serviços, integrando IA conversacional com expertise específica do seu setor.",
+      features: ["Indústria Personalizada", "Serviços Especializados", "Integração com Sistemas", "Suporte Dedicado"],
+      gradient: "from-blue-500 to-cyan-300",
+      action: "contact"
     }
   ];
 
-  const scrollToContact = () => {
-    const contactSection = document.querySelector('#contato');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+  const handleAction = (action: string) => {
+    if (action === 'labs') {
+      window.open('https://axisai.com.br/labs', '_blank');
+    } else {
+      const contactSection = document.querySelector('#contato');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -77,10 +84,14 @@ const SolutionsSection = () => {
                 
                 <Button 
                   className={`w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white group`}
-                  onClick={scrollToContact}
+                  onClick={() => handleAction(solution.action)}
                 >
-                  Saiba Mais
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  {solution.action === 'labs' ? 'Acessar Labs' : 'Saiba Mais'}
+                  {solution.action === 'labs' ? (
+                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  ) : (
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  )}
                 </Button>
               </div>
             </div>
@@ -96,7 +107,7 @@ const SolutionsSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8"
-              onClick={scrollToContact}
+              onClick={() => handleAction('contact')}
             >
               Conheça Todas as Soluções
             </Button>
