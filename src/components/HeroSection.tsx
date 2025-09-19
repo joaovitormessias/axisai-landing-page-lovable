@@ -17,8 +17,8 @@ const HeroSection = () => {
       id: 1,
       icon: FlaskConical,
       title: "AXISAI Labs",
-      text: "Assinatura de automações com IA: entregas mensais, alinhamentos estratégicos, treinamento do time e bônus exclusivos.",
-      proof: "Casos de economia operacional — até 89%.",
+      text: "Transforme ideias em automações reais. Receba melhorias mensais, alinhamentos estratégicos e bônus exclusivos que aceleram o crescimento.",
+      highlight: "Empresas já economizam até 89%.",
       badge: "Vagas limitadas",
       cta: "Inscreva sua empresa no Labs →",
       action: () => window.open('https://axisai.com.br/labs', '_blank')
@@ -27,8 +27,8 @@ const HeroSection = () => {
       id: 2,
       icon: Zap,
       title: "Automação sem integração",
-      text: "Rode IA por cima de qualquer sistema — sem mexer no backend.",
-      emphasis: "sem integração",
+      text: "Elimine tarefas repetitivas em qualquer sistema. Nossa IA atua direto na interface, sem integrações complicadas.",
+      highlight: "Ganhe eficiência sem mudar sua estrutura atual.",
       cta: "Ver como funciona →",
       action: () => scrollToContact()
     },
@@ -36,7 +36,8 @@ const HeroSection = () => {
       id: 3,
       icon: Brain,
       title: "Gestor Inteligente",
-      text: "Pergunte em linguagem natural e receba análises direto do seu banco.",
+      text: "Converse com seus dados como se fossem pessoas. Faça perguntas em linguagem natural e receba respostas em gráficos, relatórios e insights.",
+      highlight: "Do SQL ao gráfico em segundos.",
       cta: "Testar o Gestor →",
       action: () => scrollToContact()
     },
@@ -44,7 +45,8 @@ const HeroSection = () => {
       id: 4,
       icon: MessageSquare,
       title: "Atendimento WhatsApp",
-      text: "Chatbots que entendem e convertem — 24/7.",
+      text: "Atenda clientes 24/7 com uma IA que entende, responde e converte. Mais rápido que um humano, mais humano que um robô comum.",
+      highlight: "Escala ilimitada sem perder a personalização.",
       cta: "Falar com a IA →",
       action: () => scrollToContact()
     }
@@ -113,42 +115,9 @@ const HeroSection = () => {
         <div className="absolute bottom-32 left-1/3 w-48 h-48 bg-gradient-to-r from-blue-400/15 to-cyan-300/15 rounded-full blur-lg animate-pulse delay-700"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 py-20 flex flex-col lg:flex-row items-center min-h-screen">
-        <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-400/20 text-cyan-300 rounded-full text-sm font-medium mb-6">
-              Inteligência Artificial Avançada
-            </span>
-          </div>
-
-          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Transforme dados em{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              decisões inteligentes
-            </span>
-          </h1>
-
-          <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-            Potencialize sua estratégia de dados com IA generativa e analytics avançado.
-            Automatize processos, otimize atendimento e tome decisões baseadas em inteligência artificial.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg group"
-              onClick={scrollToContact}
-            >
-              Comece Agora
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-          </div>
-
-        </div>
-
-        <div className="lg:w-1/2 relative">
-          {/* Card Carousel */}
+      <div className="relative z-10 container mx-auto px-6 py-20 flex items-center justify-center min-h-screen">
+        <div className="w-full max-w-6xl relative">
+          {/* Card Carousel - Full Width */}
           <div 
             className="relative w-full"
             onMouseEnter={() => setIsPaused(true)}
@@ -163,7 +132,7 @@ const HeroSection = () => {
               <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-slate-900 to-transparent z-20 pointer-events-none"></div>
               
               {/* Cards Container */}
-              <div className="relative w-full h-80 lg:h-96">
+              <div className="relative w-full h-96 lg:h-[420px]">
                 <div 
                   className="flex transition-transform duration-300 ease-out"
                   style={{
@@ -177,13 +146,13 @@ const HeroSection = () => {
                     return (
                       <div
                         key={card.id}
-                        className={`flex-shrink-0 w-full px-4 transition-all duration-300 ${
+                        className={`flex-shrink-0 w-full px-8 lg:px-12 transition-all duration-300 ${
                           isActive ? 'opacity-100 scale-100' : 'opacity-60 scale-95'
                         }`}
                       >
-                        <div className="w-full max-w-md mx-auto h-full">
+                        <div className="w-full max-w-2xl mx-auto h-full">
                           {/* Glassmorphism Card */}
-                          <div className="relative h-full bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl hover:shadow-blue-500/20 transition-all duration-300">
+                          <div className="relative h-full bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 lg:p-10 shadow-2xl hover:shadow-blue-500/20 transition-all duration-300">
                             {/* Badge */}
                             {card.badge && (
                               <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">
@@ -192,43 +161,33 @@ const HeroSection = () => {
                             )}
                             
                             {/* Icon */}
-                            <div className="mb-4">
-                              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-xl flex items-center justify-center">
-                                <Icon className="h-6 w-6 text-white" />
+                            <div className="mb-6">
+                              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-xl flex items-center justify-center">
+                                <Icon className="h-8 w-8 text-white" />
                               </div>
                             </div>
                             
                             {/* Content */}
                             <div className="flex flex-col h-full">
-                              <h3 className="text-xl font-bold text-white mb-3">
+                              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                                 {card.title}
                               </h3>
                               
-                              <p className="text-slate-300 text-sm leading-relaxed mb-4 flex-grow">
-                                {card.emphasis ? (
-                                  <>
-                                    {card.text.split(card.emphasis)[0]}
-                                    <span className="font-semibold text-cyan-300">
-                                      {card.emphasis}
-                                    </span>
-                                    {card.text.split(card.emphasis)[1]}
-                                  </>
-                                ) : (
-                                  card.text
-                                )}
+                              <p className="text-slate-300 text-base lg:text-lg leading-relaxed mb-6 flex-grow">
+                                {card.text}
                               </p>
                               
-                              {/* Proof/Evidence */}
-                              {card.proof && (
-                                <p className="text-cyan-300 text-xs font-medium mb-4 italic">
-                                  {card.proof}
+                              {/* Highlight */}
+                              {card.highlight && (
+                                <p className="text-cyan-300 text-sm font-medium mb-6 italic">
+                                  {card.highlight}
                                 </p>
                               )}
                               
                               {/* CTA Button */}
                               <Button
                                 onClick={card.action}
-                                className="w-full bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white text-sm py-2 rounded-lg font-medium group transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
+                                className="w-full bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white text-base py-3 rounded-lg font-medium group transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
                                 aria-label={`${card.cta} para ${card.title}`}
                               >
                                 {card.cta}
@@ -246,29 +205,29 @@ const HeroSection = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 z-30 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 z-30 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Solução anterior"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-6 w-6" />
             </button>
             
             <button
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 z-30 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200 z-30 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Próxima solução"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-6 w-6" />
             </button>
 
             {/* Dots Navigation */}
-            <div className="flex justify-center mt-6 space-x-2">
+            <div className="flex justify-center mt-8 space-x-3">
               {cards.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                     index === currentIndex
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-400 w-6'
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-400 w-8'
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
                   aria-label={`Ir para ${cards[index].title}`}
